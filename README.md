@@ -3,6 +3,9 @@
 # TryHackMe-RootMe
 ### Bash script to solve the TryHackMe machine: [RootMe](https://tryhackme.com/room/rrootme). I wrote this script to learn and practice bash scripting. I used it to bypass file upload restrictions and gain access to the server, allowing me to escalate privileges later on.
 
+![ezgif com-crop](https://github.com/kvlx-alt/File-upload-bypass-TryHackMe-RootMe/assets/118694485/3a0bc6f0-8bcb-4b91-887e-ef982cd1efa5)
+
+
 ``` bash
 #!/bin/bash
 
